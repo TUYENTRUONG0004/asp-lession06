@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Tdtlession06CF.Models.TdtBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtBookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TtdTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtPublisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TdtCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtBookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TtdTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtPublisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TdtCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TdtId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TdtId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TdtId })
+        </td>
+    </tr>
+}
+
+</table>

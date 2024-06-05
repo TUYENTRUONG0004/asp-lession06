@@ -1,0 +1,80 @@
+﻿@model Tdtlession06CF.Models.TdtBook
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TdtBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TtdTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TtdTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TdtCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TdtCategoryId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
